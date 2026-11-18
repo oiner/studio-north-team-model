@@ -1,0 +1,24 @@
+{
+  "contract_sha256": "51decfd14193528e406943095c1b8382c4507fdf022435316b685867e5206145",
+  "elapsed_seconds": 8.531999999657273,
+  "future_outcomes_read": false,
+  "history_sha256": "dbe0d1baacf1e2325b6c72f93e0c04c40c4e757ce56b982f0d5226c5ced55d56",
+  "input_sha256": {
+    "acquisition_attribution": "301da5f5b0b24e99a3dc5885fb1bd608b5b7a616126b33e4b4e223a168833758",
+    "campaign_spend": "a6110f1403dbe518ce5243c1392fd99fbfa101c66525f3371997055f304c0e8d",
+    "channel_holdouts": "1233899b79e24005af9e1863bcb1b220b762534d536cdff432e5c184a164764b",
+    "feedback": "505c0c76028273363eefc13f70ca396b94b7601c910be65e7e2cb00693752568",
+    "people": "d65009952863c9e7a434d1ac51629bd7181c5ea8f776c0b9ec9b53d85e3d9826",
+    "product_events": "007185d413810f602b14b0addf046c6603610482609ea9f858d989e1c76dc63a",
+    "subscription_periods": "f99a5d171330038a9b3291b5995b0e22cf5f7e4cb9fa94473482ae3c72b3cc7f",
+    "transactions": "302397ee13f7e6c806a59ab33a4567d372f6fbd86d07a22ccf1ffeda40bfc2fb"
+  },
+  "model": "Tier-aware person-level multi-state (50/50 base + cohort-trend churn); not the released sBG reference",
+  "models_sha256": "32def2cc450cb8855370df6d91b8ebcffd9d5af6d45fb721468211050738a9a6",
+  "prediction_grid_sha256": "c3d4d1e0122bda89737e694783898642e9f2d58361dd984dbb8523fc3c6e75a2",
+  "prediction_sha256": "7a0ec04abed95717db1b240a21fa2d270fb42884f479b7b39ba49a8b63e9366e",
+  "rows": 1152,
+  "seed": 20261116,
+  "source_sha256": "0b58927466d39d1b58536d901fb38f7135c2a40f529c95c3f17e09c0f6eaee08",
+  "uv_lock_sha256": "507b67e1990285e446d138d687fad83aab70d3583921c3d09f5ac7a0923fe82e"
+}

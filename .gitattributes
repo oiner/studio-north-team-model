@@ -1,0 +1,2 @@
+# Preserve exact bytes (hashes in the contract and receipts depend on them).
+* -text

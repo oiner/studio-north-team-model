@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+outputs/
+data/
+.env
+*.log
+experiments/results*/
+!experiments/results_final/
+experiments/results_final/*
+!experiments/results_final/summary.csv
+scaffold-receipt.json
