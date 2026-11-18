@@ -1,6 +1,6 @@
 {
   "contract_sha256": "51decfd14193528e406943095c1b8382c4507fdf022435316b685867e5206145",
-  "elapsed_seconds": 8.531999999657273,
+  "elapsed_seconds": 11.04700000025332,
   "future_outcomes_read": false,
   "history_sha256": "dbe0d1baacf1e2325b6c72f93e0c04c40c4e757ce56b982f0d5226c5ced55d56",
   "input_sha256": {
@@ -14,7 +14,7 @@
     "transactions": "302397ee13f7e6c806a59ab33a4567d372f6fbd86d07a22ccf1ffeda40bfc2fb"
   },
   "model": "Tier-aware person-level multi-state (50/50 base + cohort-trend churn); not the released sBG reference",
-  "models_sha256": "32def2cc450cb8855370df6d91b8ebcffd9d5af6d45fb721468211050738a9a6",
+  "models_sha256": "4763ad2cc8323db743190e721a5c09c51023a483e558d84f2756301ceab93b01",
   "prediction_grid_sha256": "c3d4d1e0122bda89737e694783898642e9f2d58361dd984dbb8523fc3c6e75a2",
   "prediction_sha256": "7a0ec04abed95717db1b240a21fa2d270fb42884f479b7b39ba49a8b63e9366e",
   "rows": 1152,

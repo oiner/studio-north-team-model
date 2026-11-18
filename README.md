@@ -99,6 +99,9 @@ Twelve candidates were screened; [`experiments/RESULTS.md`](experiments/RESULTS.
 - **Validation code** in `experiments/` (not needed for prediction):
   - `uv run --frozen python experiments/run_backtests.py --data-dir <released data>`, run with `experiments/` and the repo root on `PYTHONPATH`.
   - `experiments/constant_hazard_example.py` keeps the scaffold's original example for comparison.
+- **Saved outputs** (records only; prediction never reads them):
+  - [`evidence/predictions.csv`](evidence/predictions.csv): the submitted forecast, seed 20261116, SHA-256 `7a0ec04a…`;
+  - [`evidence/fitted_parameters.json`](evidence/fitted_parameters.json): all fitted coefficients and rates for both blend components, plus input hashes and the seed.
 - **Runtime evidence:** see [`REPRODUCIBILITY.md`](REPRODUCIBILITY.md). It records two clean locked runs with identical prediction bytes, receipts, and the instructor validator result.
 
-No private outcomes, credentials, transcripts, data copies or fitted artifacts are in this repository.
+No private outcomes, credentials, transcripts or data copies are in this repository. `evidence/fitted_parameters.json` is a record of the fit, not an input: `main.py` refits from the supplied tables on every run.

@@ -404,5 +404,9 @@ def multistate(ctx, behaviour=True, trend=True, window=12, cohort_trend=False, t
     g['predicted_retained'] = g.r
     g['predicted_net_revenue'] = g.n
     g['predicted_contribution'] = g.c
-    ctx.multistate = {'churn': churn, 'upgrade': upgrade, 'tiers': tiers, 'addon': add_coef}
+    ctx.multistate = {'churn': churn, 'upgrade': upgrade, 'tiers': tiers, 'addon': add_coef,
+                      'addon_vc_ratio': float(add_vc_ratio), 'resid_net': float(resid_net),
+                      'resid_vc': float(resid_vc), 'cats': cats, 'behaviour': behaviour,
+                      'cohort_trend': cohort_trend, 'churn_rows': int(len(tr)), 'upgrade_rows': int(len(st)),
+                      'addon_effect': effect}
     return g.drop(columns=['k', 'r', 'n', 'c'])

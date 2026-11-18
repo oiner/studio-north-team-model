@@ -10,8 +10,8 @@ These checks were run on 2026-11-18 on a Windows laptop CPU with Python 3.12.14 
    ```
 
    - Both runs printed `{"status": "validated", "rows": 1152}`.
-   - Model time was about 8.5 s, and wall time about 13 s per run, including Python start-up.
-3. **Prediction bytes are identical.** Both runs produced SHA-256 `7a0ec04abed95717db1b240a21fa2d270fb42884f479b7b39ba49a8b63e9366e`. Receipts are in [`evidence/`](evidence/). They record the source, `uv.lock`, contract, grid and input hashes, plus `future_outcomes_read: false`.
+   - Model time was about 8.5–11 s per run, and wall time about 13 s including Python start-up. The runs were repeated after `models.py` was changed to record fitted values; the predictions were byte-identical.
+3. **Prediction bytes are identical.** Both runs produced SHA-256 `7a0ec04abed95717db1b240a21fa2d270fb42884f479b7b39ba49a8b63e9366e`. The output itself is [`evidence/predictions.csv`](evidence/predictions.csv), and the run receipts are in [`evidence/`](evidence/). They record the source, `uv.lock`, contract, grid and input hashes, plus `future_outcomes_read: false`.
 4. **The instructor's public validator passed.** The run was `uv run --frozen python lab.py --output outputs/student validate-submission --csv <run1>/predictions.csv` in the lab repository at commit `0e40ce3cd0b788a3914ca4eb9f90d58ae1b62903`. It returned `status: passed` for 1,152 rows.
 5. **Manual inspection** of the raw model output found no clipping or adjustment anywhere in `predict`:
 
@@ -23,5 +23,7 @@ These checks were run on 2026-11-18 on a Windows laptop CPU with Python 3.12.14 
    | Units: contribution | USD; $26–$44 per expected member-month, 46–51% of net revenue |
    | Membership | Strictly decreasing in every cell; largest month-to-month change is −0.057 |
    | Nonnegativity | All values nonnegative and finite |
+
+6. **Fitted parameters.** [`evidence/fitted_parameters.json`](evidence/fitted_parameters.json) records every fitted value in both blend components: churn and upgrade logit coefficients, in standardized and raw units with feature means and SDs; subscription price and variable-cost trends by tier; the add-on curve and a summary of person multipliers; and residual cash rates. It also records input hashes and the seed. It was produced by `uv run --frozen python experiments/dump_parameters.py --data-dir INPUTS --output evidence/fitted_parameters.json`, which refits exactly what `predict` fits. Prediction never reads it; every run refits from the data.
 
 Passing the format checks says nothing about accuracy on the private holdout.
